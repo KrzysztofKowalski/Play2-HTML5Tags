@@ -1,10 +1,14 @@
-# HTML5 form tags module for Play 2
+# HTML5 form tags module for Play Framework
 ## for Java and Scala
 
-This module brings client side validation attributes (required, max|min length, ...) and formats support (date, number, email, ...) to Play 2.1 templates.
+This module brings client side validation attributes (required, max|min length, ...) and formats support (date, number, email, ...) to Play templates.
 The provided tags can also display forms with special input controls, like a numeric keypad to enter numbers on a smartphone, a calendar for date selection and so on.
 
 Attributes are generated from the constraints defined in the model or in a form mapping. 
+
+## Compatibility
+
+This module is compatible with Play 2.1.x and 2.2.x.
 
 ## How to install it
 
