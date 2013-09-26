@@ -16,13 +16,13 @@ import views.html._
  * Generate an HTML input email field with HTML5 validation attributes
  * The validation attributes are generated from the constraints defined on the model
  */
-object email extends BaseScalaTemplate[play.api.templates.Html,Format[play.api.templates.Html]](play.api.templates.HtmlFormat) with play.api.templates.Template4[play.api.data.Field,Array[scala.Tuple2[Symbol, Any]],views.html.helper.FieldConstructor,play.api.i18n.Lang,play.api.templates.Html] {
+object email extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template4[play.api.data.Field,Array[scala.Tuple2[Symbol, Any]],views.html.helper.FieldConstructor,play.api.i18n.Lang,play.api.templates.HtmlFormat.Appendable] {
 
     /**
  * Generate an HTML input email field with HTML5 validation attributes
  * The validation attributes are generated from the constraints defined on the model
  */
-    def apply/*5.2*/(field: play.api.data.Field, args: (Symbol,Any)*)(implicit handler: views.html.helper.FieldConstructor, lang: play.api.i18n.Lang):play.api.templates.Html = {
+    def apply/*5.2*/(field: play.api.data.Field, args: (Symbol,Any)*)(implicit handler: views.html.helper.FieldConstructor, lang: play.api.i18n.Lang):play.api.templates.HtmlFormat.Appendable = {
         _display_ {import html5.templates._
 
 import views.html.helper._
@@ -37,19 +37,19 @@ Seq[Any](format.raw/*5.131*/("""
 """))}
     }
     
-    def render(field:play.api.data.Field,args:Array[scala.Tuple2[Symbol, Any]],handler:views.html.helper.FieldConstructor,lang:play.api.i18n.Lang): play.api.templates.Html = apply(field,args:_*)(handler,lang)
+    def render(field:play.api.data.Field,args:Array[scala.Tuple2[Symbol, Any]],handler:views.html.helper.FieldConstructor,lang:play.api.i18n.Lang): play.api.templates.HtmlFormat.Appendable = apply(field,args:_*)(handler,lang)
     
-    def f:((play.api.data.Field,Array[scala.Tuple2[Symbol, Any]]) => (views.html.helper.FieldConstructor,play.api.i18n.Lang) => play.api.templates.Html) = (field,args) => (handler,lang) => apply(field,args:_*)(handler,lang)
+    def f:((play.api.data.Field,Array[scala.Tuple2[Symbol, Any]]) => (views.html.helper.FieldConstructor,play.api.i18n.Lang) => play.api.templates.HtmlFormat.Appendable) = (field,args) => (handler,lang) => apply(field,args:_*)(handler,lang)
     
     def ref: this.type = this
 
 }
                 /*
                     -- GENERATED --
-                    DATE: Thu Sep 19 15:46:07 CEST 2013
+                    DATE: Thu Sep 26 17:52:23 CEST 2013
                     SOURCE: /home/k/workspace/Play2-HTML5Tags/app/html5/tags/email.scala.html
-                    HASH: 0154ced17238080f7fd806e5f5394fabe0900213
-                    MATRIX: 928->165|1188->294|1216->350|1253->352|1283->373|1354->406|1420->436|1444->438|1489->447|1515->451|1561->461|1588->466|1627->469|1669->489|1707->491|1730->505|1773->525|1807->528
+                    HASH: cf5f7d750832618237e608e773f88ceb0050ef17
+                    MATRIX: 979->165|1256->294|1284->350|1321->352|1351->373|1422->406|1488->436|1512->438|1557->447|1583->451|1629->461|1656->466|1695->469|1737->489|1775->491|1798->505|1841->525|1875->528
                     LINES: 25->5|31->5|33->9|34->10|34->10|34->10|35->11|35->11|35->11|35->11|35->11|35->11|35->11|35->11|35->11|35->11|35->11|36->12
                     -- GENERATED --
                 */

@@ -16,13 +16,13 @@ import views.html._
  * Generate an HTML input tel field with HTML5 validation attributes
  * The validation attributes are generated from the constraints defined on the model
  */
-object tel extends BaseScalaTemplate[play.api.templates.Html,Format[play.api.templates.Html]](play.api.templates.HtmlFormat) with play.api.templates.Template4[play.api.data.Field,Array[scala.Tuple2[Symbol, Any]],views.html.helper.FieldConstructor,play.api.i18n.Lang,play.api.templates.Html] {
+object tel extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template4[play.api.data.Field,Array[scala.Tuple2[Symbol, Any]],views.html.helper.FieldConstructor,play.api.i18n.Lang,play.api.templates.HtmlFormat.Appendable] {
 
     /**
  * Generate an HTML input tel field with HTML5 validation attributes
  * The validation attributes are generated from the constraints defined on the model
  */
-    def apply/*5.2*/(field: play.api.data.Field, args: (Symbol,Any)*)(implicit handler: views.html.helper.FieldConstructor, lang: play.api.i18n.Lang):play.api.templates.Html = {
+    def apply/*5.2*/(field: play.api.data.Field, args: (Symbol,Any)*)(implicit handler: views.html.helper.FieldConstructor, lang: play.api.i18n.Lang):play.api.templates.HtmlFormat.Appendable = {
         _display_ {import html5.templates._
 
 import views.html.helper._
@@ -37,19 +37,19 @@ Seq[Any](format.raw/*5.131*/("""
 """))}
     }
     
-    def render(field:play.api.data.Field,args:Array[scala.Tuple2[Symbol, Any]],handler:views.html.helper.FieldConstructor,lang:play.api.i18n.Lang): play.api.templates.Html = apply(field,args:_*)(handler,lang)
+    def render(field:play.api.data.Field,args:Array[scala.Tuple2[Symbol, Any]],handler:views.html.helper.FieldConstructor,lang:play.api.i18n.Lang): play.api.templates.HtmlFormat.Appendable = apply(field,args:_*)(handler,lang)
     
-    def f:((play.api.data.Field,Array[scala.Tuple2[Symbol, Any]]) => (views.html.helper.FieldConstructor,play.api.i18n.Lang) => play.api.templates.Html) = (field,args) => (handler,lang) => apply(field,args:_*)(handler,lang)
+    def f:((play.api.data.Field,Array[scala.Tuple2[Symbol, Any]]) => (views.html.helper.FieldConstructor,play.api.i18n.Lang) => play.api.templates.HtmlFormat.Appendable) = (field,args) => (handler,lang) => apply(field,args:_*)(handler,lang)
     
     def ref: this.type = this
 
 }
                 /*
                     -- GENERATED --
-                    DATE: Thu Sep 19 15:46:07 CEST 2013
+                    DATE: Thu Sep 26 17:52:23 CEST 2013
                     SOURCE: /home/k/workspace/Play2-HTML5Tags/app/html5/tags/tel.scala.html
-                    HASH: cff49255aea91710de69806b6427be01ba659e66
-                    MATRIX: 922->163|1182->292|1210->348|1247->350|1277->371|1348->404|1412->432|1436->434|1481->443|1507->447|1553->457|1580->462|1619->465|1661->485|1699->487|1722->501|1765->521|1799->524
+                    HASH: 9ec6ae5414bf723fc322153cefe4cff45a78a462
+                    MATRIX: 973->163|1250->292|1278->348|1315->350|1345->371|1416->404|1480->432|1504->434|1549->443|1575->447|1621->457|1648->462|1687->465|1729->485|1767->487|1790->501|1833->521|1867->524
                     LINES: 25->5|31->5|33->9|34->10|34->10|34->10|35->11|35->11|35->11|35->11|35->11|35->11|35->11|35->11|35->11|35->11|35->11|36->12
                     -- GENERATED --
                 */

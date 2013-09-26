@@ -29,7 +29,7 @@ import views.html._
  * @param args Set of extra HTML attributes.
  * @param handler The field constructor.
  */
-object radioGroup extends BaseScalaTemplate[play.api.templates.Html,Format[play.api.templates.Html]](play.api.templates.HtmlFormat) with play.api.templates.Template5[play.api.data.Field,Seq[scala.Tuple2[String, String]],Array[scala.Tuple2[Symbol, Any]],views.html.helper.FieldConstructor,play.api.i18n.Lang,play.api.templates.Html] {
+object radioGroup extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template5[play.api.data.Field,Seq[scala.Tuple2[String, String]],Array[scala.Tuple2[Symbol, Any]],views.html.helper.FieldConstructor,play.api.i18n.Lang,play.api.templates.HtmlFormat.Appendable] {
 
     /**
  * Generate an HTML radio group
@@ -48,7 +48,7 @@ object radioGroup extends BaseScalaTemplate[play.api.templates.Html,Format[play.
  * @param args Set of extra HTML attributes.
  * @param handler The field constructor.
  */
-    def apply/*18.2*/(field: play.api.data.Field, options: Seq[(String,String)], args: (Symbol,Any)*)(implicit handler: views.html.helper.FieldConstructor, lang: play.api.i18n.Lang):play.api.templates.Html = {
+    def apply/*18.2*/(field: play.api.data.Field, options: Seq[(String,String)], args: (Symbol,Any)*)(implicit handler: views.html.helper.FieldConstructor, lang: play.api.i18n.Lang):play.api.templates.HtmlFormat.Appendable = {
         _display_ {import html5.templates.Html5Templates
 
 import views.html.helper.input
@@ -68,19 +68,19 @@ Seq[Any](format.raw/*18.162*/("""
 """))}
     }
     
-    def render(field:play.api.data.Field,options:Seq[scala.Tuple2[String, String]],args:Array[scala.Tuple2[Symbol, Any]],handler:views.html.helper.FieldConstructor,lang:play.api.i18n.Lang): play.api.templates.Html = apply(field,options,args:_*)(handler,lang)
+    def render(field:play.api.data.Field,options:Seq[scala.Tuple2[String, String]],args:Array[scala.Tuple2[Symbol, Any]],handler:views.html.helper.FieldConstructor,lang:play.api.i18n.Lang): play.api.templates.HtmlFormat.Appendable = apply(field,options,args:_*)(handler,lang)
     
-    def f:((play.api.data.Field,Seq[scala.Tuple2[String, String]],Array[scala.Tuple2[Symbol, Any]]) => (views.html.helper.FieldConstructor,play.api.i18n.Lang) => play.api.templates.Html) = (field,options,args) => (handler,lang) => apply(field,options,args:_*)(handler,lang)
+    def f:((play.api.data.Field,Seq[scala.Tuple2[String, String]],Array[scala.Tuple2[Symbol, Any]]) => (views.html.helper.FieldConstructor,play.api.i18n.Lang) => play.api.templates.HtmlFormat.Appendable) = (field,options,args) => (handler,lang) => apply(field,options,args:_*)(handler,lang)
     
     def ref: this.type = this
 
 }
                 /*
                     -- GENERATED --
-                    DATE: Thu Sep 19 15:46:08 CEST 2013
+                    DATE: Thu Sep 26 17:52:23 CEST 2013
                     SOURCE: /home/k/workspace/Play2-HTML5Tags/app/html5/tags/radioGroup.scala.html
-                    HASH: b27583164fa869696c875a55a6f40fa5dcb72ba6
-                    MATRIX: 1496->429|1805->589|1834->662|1871->664|1901->685|1972->718|2040->750|2064->752|2107->760|2123->767|2136->771|2181->778|2249->810|2275->814|2313->816|2323->817|2348->820|2393->829|2419->833|2465->843|2475->844|2500->847|2539->850|2605->893|2644->895|2687->915|2726->917|2750->931|2793->951|2850->972|2876->976|2914->978|2924->979|2949->982|2988->985|2998->986|3023->989|3068->1003|3111->1015
+                    HASH: 11e009a93e24d903bf985c19e473c74db8c2b72b
+                    MATRIX: 1547->429|1873->589|1902->662|1939->664|1969->685|2040->718|2108->750|2132->752|2175->760|2191->767|2204->771|2249->778|2317->810|2343->814|2381->816|2391->817|2416->820|2461->829|2487->833|2533->843|2543->844|2568->847|2607->850|2673->893|2712->895|2755->915|2794->917|2818->931|2861->951|2918->972|2944->976|2982->978|2992->979|3017->982|3056->985|3066->986|3091->989|3136->1003|3179->1015
                     LINES: 51->18|57->18|59->22|60->23|60->23|60->23|61->24|61->24|62->25|62->25|62->25|62->25|63->26|63->26|63->26|63->26|63->26|63->26|63->26|63->26|63->26|63->26|63->26|63->26|63->26|63->26|63->26|63->26|63->26|64->27|64->27|64->27|64->27|64->27|64->27|64->27|64->27|65->28|67->30
                     -- GENERATED --
                 */

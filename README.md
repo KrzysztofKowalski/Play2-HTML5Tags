@@ -1,7 +1,7 @@
 # HTML5 form tags module for Play 2
 ## for Java and Scala
 
-This module brings client side validation attributes (required, max|min length, ...) and formats support (date, number, email, ...) to Play 2.1 templates.
+This module brings client side validation attributes (required, max|min length, ...) and formats support (date, number, email, ...) to Play 2.2 templates.
 The provided tags can also display forms with special input controls, like a numeric keypad to enter numbers on a smartphone, a calendar for date selection and so on.
 
 Attributes are generated from the constraints defined in the model or in a form mapping. 
@@ -10,18 +10,37 @@ Attributes are generated from the constraints defined in the model or in a form 
 
 In your application, add this configuration to the `project/Build.scala` file :
 
+# For Play 2.2.x+
+
 ```scala
 val appDependencies = Seq(
   //your dependencies
-  "com.loicdescotte.coffeebean" % "html5tags_2.10" % "1.1.0"
+  "com.github.krzysztofkowalski" %% "html5tags" % "1.2.0"
 )
 
 val main = play.Project(appName, appVersion, appDependencies).settings(
   //your settings
-  resolvers += Resolver.url("github repo for html5tags", url("http://loicdescotte.github.io/releases/"))(Resolver.ivyStylePatterns)
+  resolvers += Resolver.url("k@github repo for html5tags", url("http://krzysztofkowalski.github.io/releases/"))(Resolver.ivyStylePatterns)
 )
 ```
-  
+
+# For play 2.1.x use
+
+```scala
+val appDependencies = Seq(
+  //your dependencies
+  "com.loicdescotte.coffeebean" %% "html5tags" % "1.1.2-SNAPSHOT"
+)
+
+val main = play.Project(appName, appVersion, appDependencies).settings(
+  //your settings
+  resolvers += Resolver.url("k@github repo for html5tags", url("http://krzysztofkowalski.github.io/releases/"))(Resolver.ivyStylePatterns)
+)
+
+```  
+
+
+
 ## Code examples
 
 With this view template : 
@@ -137,3 +156,8 @@ You can check pattern compatibility with Javascript regular expressions (used by
 This project is published under the Apache License v2.0.
 
 You may obtain a copy of the License at [http://www.apache.org/licenses/LICENSE-2.0] (http://www.apache.org/licenses/LICENSE-2.0).
+
+## History
+
+Forked from https://github.com/loicdescotte/Play2-HTML5Tags
+and added support to Play 2.1.x and 2.2.x

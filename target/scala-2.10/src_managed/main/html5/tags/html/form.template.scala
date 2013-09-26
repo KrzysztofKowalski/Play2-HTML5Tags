@@ -26,7 +26,7 @@ import views.html._
  * @param args Set of extra HTML attributes.
  * @param body The form body.
  */
-object form extends BaseScalaTemplate[play.api.templates.Html,Format[play.api.templates.Html]](play.api.templates.HtmlFormat) with play.api.templates.Template3[play.api.mvc.Call,Array[scala.Tuple2[Symbol, String]],Html,play.api.templates.Html] {
+object form extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template3[play.api.mvc.Call,Array[scala.Tuple2[Symbol, String]],Html,play.api.templates.HtmlFormat.Appendable] {
 
     /**
  * Generate an HTML form.
@@ -42,7 +42,7 @@ object form extends BaseScalaTemplate[play.api.templates.Html,Format[play.api.te
  * @param args Set of extra HTML attributes.
  * @param body The form body.
  */
-    def apply/*15.2*/(action: play.api.mvc.Call, args: (Symbol,String)*)(body: => Html):play.api.templates.Html = {
+    def apply/*15.2*/(action: play.api.mvc.Call, args: (Symbol,String)*)(body: => Html):play.api.templates.HtmlFormat.Appendable = {
         _display_ {
 
 Seq[Any](format.raw/*15.68*/(""" 
@@ -53,19 +53,19 @@ Seq[Any](format.raw/*15.68*/("""
 """))}
     }
     
-    def render(action:play.api.mvc.Call,args:Array[scala.Tuple2[Symbol, String]],body:Html): play.api.templates.Html = apply(action,args:_*)(body)
+    def render(action:play.api.mvc.Call,args:Array[scala.Tuple2[Symbol, String]],body:Html): play.api.templates.HtmlFormat.Appendable = apply(action,args:_*)(body)
     
-    def f:((play.api.mvc.Call,Array[scala.Tuple2[Symbol, String]]) => ( => Html) => play.api.templates.Html) = (action,args) => (body) => apply(action,args:_*)(body)
+    def f:((play.api.mvc.Call,Array[scala.Tuple2[Symbol, String]]) => ( => Html) => play.api.templates.HtmlFormat.Appendable) = (action,args) => (body) => apply(action,args:_*)(body)
     
     def ref: this.type = this
 
 }
                 /*
                     -- GENERATED --
-                    DATE: Thu Sep 19 15:46:07 CEST 2013
+                    DATE: Thu Sep 26 17:52:23 CEST 2013
                     SOURCE: /home/k/workspace/Play2-HTML5Tags/app/html5/tags/form.scala.html
-                    HASH: ce2a89550b5b6c4ce329220182f4efab1bea8424
-                    MATRIX: 1070->260|1214->326|1268->344|1283->350|1309->354|1356->365|1371->371|1400->378|1439->381|1483->403|1525->410|1551->414
+                    HASH: a1c0532490104f7548e7e096d3601be3a8afdf17
+                    MATRIX: 1121->260|1282->326|1336->344|1351->350|1377->354|1424->365|1439->371|1468->378|1507->381|1551->403|1593->410|1619->414
                     LINES: 45->15|48->15|50->17|50->17|50->17|50->17|50->17|50->17|50->17|50->17|51->18|51->18
                     -- GENERATED --
                 */

@@ -24,7 +24,7 @@ import views.html._
  * @param args Set of extra HTML attributes ('''id''' and '''label''' are 2 special arguments).
  * @param handler The field constructor.
  */
-object checkbox extends BaseScalaTemplate[play.api.templates.Html,Format[play.api.templates.Html]](play.api.templates.HtmlFormat) with play.api.templates.Template4[play.api.data.Field,Array[scala.Tuple2[Symbol, Any]],views.html.helper.FieldConstructor,play.api.i18n.Lang,play.api.templates.Html] {
+object checkbox extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template4[play.api.data.Field,Array[scala.Tuple2[Symbol, Any]],views.html.helper.FieldConstructor,play.api.i18n.Lang,play.api.templates.HtmlFormat.Appendable] {
 
     /**
  * Generate an HTML input checkbox.
@@ -38,7 +38,7 @@ object checkbox extends BaseScalaTemplate[play.api.templates.Html,Format[play.ap
  * @param args Set of extra HTML attributes ('''id''' and '''label''' are 2 special arguments).
  * @param handler The field constructor.
  */
-    def apply/*13.2*/(field: play.api.data.Field, args: (Symbol,Any)*)(implicit handler: views.html.helper.FieldConstructor, lang: play.api.i18n.Lang):play.api.templates.Html = {
+    def apply/*13.2*/(field: play.api.data.Field, args: (Symbol,Any)*)(implicit handler: views.html.helper.FieldConstructor, lang: play.api.i18n.Lang):play.api.templates.HtmlFormat.Appendable = {
         _display_ {import html5.templates._
 
 import views.html.helper._
@@ -56,19 +56,19 @@ Seq[Any](format.raw/*13.131*/("""
 """))}
     }
     
-    def render(field:play.api.data.Field,args:Array[scala.Tuple2[Symbol, Any]],handler:views.html.helper.FieldConstructor,lang:play.api.i18n.Lang): play.api.templates.Html = apply(field,args:_*)(handler,lang)
+    def render(field:play.api.data.Field,args:Array[scala.Tuple2[Symbol, Any]],handler:views.html.helper.FieldConstructor,lang:play.api.i18n.Lang): play.api.templates.HtmlFormat.Appendable = apply(field,args:_*)(handler,lang)
     
-    def f:((play.api.data.Field,Array[scala.Tuple2[Symbol, Any]]) => (views.html.helper.FieldConstructor,play.api.i18n.Lang) => play.api.templates.Html) = (field,args) => (handler,lang) => apply(field,args:_*)(handler,lang)
+    def f:((play.api.data.Field,Array[scala.Tuple2[Symbol, Any]]) => (views.html.helper.FieldConstructor,play.api.i18n.Lang) => play.api.templates.HtmlFormat.Appendable) = (field,args) => (handler,lang) => apply(field,args:_*)(handler,lang)
     
     def ref: this.type = this
 
 }
                 /*
                     -- GENERATED --
-                    DATE: Thu Sep 19 15:46:07 CEST 2013
+                    DATE: Thu Sep 26 17:52:23 CEST 2013
                     SOURCE: /home/k/workspace/Play2-HTML5Tags/app/html5/tags/checkbox.scala.html
-                    HASH: b2de317818dd2989def320a1791d37fc4129500a
-                    MATRIX: 1168->283|1411->470|1428->478|1508->412|1537->468|1566->526|1604->529|1634->550|1705->583|1774->616|1798->618|1843->627|1869->631|1915->641|1945->649|1984->652|2054->699|2093->701|2160->745|2199->747|2223->761|2266->781|2315->794|2328->798|2368->816|2408->825
+                    HASH: 4970d9bf9685eb91df6076019fdb1e6a05bee155
+                    MATRIX: 1219->283|1479->470|1496->478|1576->412|1605->468|1634->526|1672->529|1702->550|1773->583|1842->616|1866->618|1911->627|1937->631|1983->641|2013->649|2052->652|2122->699|2161->701|2228->745|2267->747|2291->761|2334->781|2383->794|2396->798|2436->816|2476->825
                     LINES: 41->13|46->18|46->18|47->13|49->17|50->18|52->20|52->20|52->20|53->21|53->21|53->21|53->21|53->21|53->21|53->21|53->21|53->21|53->21|53->21|53->21|53->21|54->22|54->22|54->22|55->23
                     -- GENERATED --
                 */

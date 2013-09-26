@@ -24,7 +24,7 @@ import views.html._
  * @param args Set of extra attributes.
  * @param handler The field constructor.
  */
-object select extends BaseScalaTemplate[play.api.templates.Html,Format[play.api.templates.Html]](play.api.templates.HtmlFormat) with play.api.templates.Template5[play.api.data.Field,Seq[scala.Tuple2[String, String]],Array[scala.Tuple2[Symbol, Any]],views.html.helper.FieldConstructor,play.api.i18n.Lang,play.api.templates.Html] {
+object select extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template5[play.api.data.Field,Seq[scala.Tuple2[String, String]],Array[scala.Tuple2[Symbol, Any]],views.html.helper.FieldConstructor,play.api.i18n.Lang,play.api.templates.HtmlFormat.Appendable] {
 
     /**
  * Generate an HTML select.
@@ -38,7 +38,7 @@ object select extends BaseScalaTemplate[play.api.templates.Html,Format[play.api.
  * @param args Set of extra attributes.
  * @param handler The field constructor.
  */
-    def apply/*13.2*/(field: play.api.data.Field, options: Seq[(String,String)], args: (Symbol,Any)*)(implicit handler: views.html.helper.FieldConstructor, lang: play.api.i18n.Lang):play.api.templates.Html = {
+    def apply/*13.2*/(field: play.api.data.Field, options: Seq[(String,String)], args: (Symbol,Any)*)(implicit handler: views.html.helper.FieldConstructor, lang: play.api.i18n.Lang):play.api.templates.HtmlFormat.Appendable = {
         _display_ {import html5.templates._
 
 import views.html.helper.input
@@ -60,19 +60,19 @@ Seq[Any](format.raw/*13.162*/("""
 """))}
     }
     
-    def render(field:play.api.data.Field,options:Seq[scala.Tuple2[String, String]],args:Array[scala.Tuple2[Symbol, Any]],handler:views.html.helper.FieldConstructor,lang:play.api.i18n.Lang): play.api.templates.Html = apply(field,options,args:_*)(handler,lang)
+    def render(field:play.api.data.Field,options:Seq[scala.Tuple2[String, String]],args:Array[scala.Tuple2[Symbol, Any]],handler:views.html.helper.FieldConstructor,lang:play.api.i18n.Lang): play.api.templates.HtmlFormat.Appendable = apply(field,options,args:_*)(handler,lang)
     
-    def f:((play.api.data.Field,Seq[scala.Tuple2[String, String]],Array[scala.Tuple2[Symbol, Any]]) => (views.html.helper.FieldConstructor,play.api.i18n.Lang) => play.api.templates.Html) = (field,options,args) => (handler,lang) => apply(field,options,args:_*)(handler,lang)
+    def f:((play.api.data.Field,Seq[scala.Tuple2[String, String]],Array[scala.Tuple2[Symbol, Any]]) => (views.html.helper.FieldConstructor,play.api.i18n.Lang) => play.api.templates.HtmlFormat.Appendable) = (field,options,args) => (handler,lang) => apply(field,options,args:_*)(handler,lang)
     
     def ref: this.type = this
 
 }
                 /*
                     -- GENERATED --
-                    DATE: Thu Sep 19 15:46:08 CEST 2013
+                    DATE: Thu Sep 26 17:52:23 CEST 2013
                     SOURCE: /home/k/workspace/Play2-HTML5Tags/app/html5/tags/select.scala.html
-                    HASH: be14fc7b6250f66e9a4b8a92df489f3e4ae17803
-                    MATRIX: 1134->250|1430->410|1459->470|1496->472|1526->493|1597->526|1651->544|1675->546|1720->555|1746->559|1785->562|1827->582|1865->584|1888->598|1930->618|1977->629|1990->633|2024->658|2080->676|2161->721|2195->733|2246->752|2292->762|2308->769|2321->773|2366->780|2431->809|2441->810|2466->813|2505->816|2571->860|2609->862|2619->863|2644->866|2695->885|2742->901
+                    HASH: 504eace6ce7a9f769a0a4fe462d4f0708a041e37
+                    MATRIX: 1185->250|1498->410|1527->470|1564->472|1594->493|1665->526|1719->544|1743->546|1788->555|1814->559|1853->562|1895->582|1933->584|1956->598|1998->618|2045->629|2058->633|2092->658|2148->676|2229->721|2263->733|2314->752|2360->762|2376->769|2389->773|2434->780|2499->809|2509->810|2534->813|2573->816|2639->860|2677->862|2687->863|2712->866|2763->885|2810->901
                     LINES: 41->13|47->13|49->17|50->18|50->18|50->18|51->19|51->19|51->19|51->19|51->19|51->19|51->19|51->19|51->19|52->20|52->20|52->20|52->20|53->21|53->21|54->22|55->23|55->23|55->23|55->23|56->24|56->24|56->24|56->24|56->24|56->24|56->24|56->24|57->25|59->27
                     -- GENERATED --
                 */
