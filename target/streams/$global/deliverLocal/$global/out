@@ -1,4 +1,0 @@
-[0m[[0minfo[0m] [0m:: delivering :: com.github.krzysztofkowalski#html5tags_2.10;1.2.0 :: 1.2.0 :: release :: Thu Sep 26 17:58:22 CEST 2013[0m
-[0m[[0mdebug[0m] [0m	options = status=release pubdate=Thu Sep 26 17:58:22 CEST 2013 validate=true resolveDynamicRevisions=true merge=true resolveId=null pubBranch=null[0m
-[0m[[0minfo[0m] [0m	delivering ivy file to /home/k/workspace/Play2-HTML5Tags/target/scala-2.10/ivy-1.2.0.xml[0m
-[0m[[0mdebug[0m] [0m	deliver done (196ms)[0m
